@@ -31,7 +31,7 @@ export function generateMap(config: MapConfig): Biome[][] {
   
   // 2. Générer des zones pour chaque biome
   const biomesToPlace = availableBiome.filter(biome => biome !== baseBiome);
-  for (let i = 0; i < numberOfBiomes - 1; i++) {  // -1 car le baseBiome est déjà placé
+  for (let i = 0; i < numberOfBiomes; i++) {
     const biome = biomesToPlace[i % biomesToPlace.length];
     placeBiomeZone(map, biome);
   }
