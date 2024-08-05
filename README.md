@@ -1,64 +1,43 @@
-# Eco Impact Map Generator API
+# Map Generator - Back-end
 
-## Description
+## Overview
+This NestJS application serves as the back-end for the Eco Impact Map Generator technical interview. It handles the logic for generating random biome maps based on provided configurations.
 
-Cette API a été développée dans le cadre d'un test technique pour Eco Impact. Elle permet de générer des cartes aléatoires basées sur une configuration donnée, en utilisant différents biomes.
+## Technologies Used
+- NestJS
+- TypeScript
+- Class Validator (for DTO validation)
 
-## Caractéristiques principales
+## Setup and Installation
+1. Ensure you have Node.js (version 14 or later) installed on your system.
+2. Clone this repository to your local machine.
+3. Navigate to the project directory in your terminal.
+4. Run `npm install` to install all dependencies.
 
-- Génération de cartes aléatoires basées sur une configuration
-- Utilisation de NestJS pour une architecture robuste et extensible
-- Implémentation en TypeScript pour un typage fort
-- Validation des entrées avec class-validator
-- Séparation claire des responsabilités (contrôleurs, services, logique métier)
+## Running the Application
+- Development mode: `npm run start:dev`
+- Production mode: `npm run start:prod`
 
-## Installation
+## Project Structure
+- `src/`
+  - `map/`: Map module (controller, service, DTOs)
+  - `core/`: Core types and interfaces
+  - `utils/`: Utility functions including map generation logic
+  - `main.ts`: Application entry point
 
-```bash
-npm install
-```
+## API Endpoints
+- POST `/map/generate`: Generates a new map based on provided configuration
 
-## Lancement de l'application
+## Key Features
+- Robust map generation algorithm
+- Input validation using DTOs
+- Modular architecture for easy extension
 
-```bash
-npm run start
-```
 
-Pour le mode développement avec rechargement automatique : 
+## Future Improvements
+- Implement caching mechanism for generated maps
+- Add more complex biome generation rules
+- Implement tests
 
-```bash
-npm run start:dev
-```
-
-## Tests
-
-```bash
-npm run test
-```
-
-## Structure du projet 
-
-```
-src/
-|── core/
-|   |── constants/
-|       └── biomes.ts
-│   ├── interfaces/
-│   │   └── map-config.interface.ts
-│   └── types/
-│       └── biome.type.ts
-├── map/
-│   ├── dto/
-│   │   └── map-config.dto.ts
-│   ├── map.controller.ts
-│   ├── map.service.ts
-│   └── map.module.ts
-├── utils/
-│   └── map-generator.util.ts
-└── app.module.ts
-```
-
-## Choix techniques 
-* NestJS : Choisi pour sa structure modulaire et son support de TypeScript
-* TypeScript : Utilisé pour améliorer la maintenabilité et réduire les erreurs potentielles
-* `class-validator` : Utilisé pour une validation robuste des entrées 
+## Contributing
+Contributions are welcome. Please fork the repository and submit pull requests for any enhancements.
