@@ -1,0 +1,1 @@
+export const Biomes = ["plain", "desert", "forest", "ocean"] as const;
