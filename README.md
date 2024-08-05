@@ -38,3 +38,27 @@ npm run test
 
 ## Structure du projet 
 
+```
+src/
+|── core/
+|   |── constants/
+|       └── biomes.ts
+│   ├── interfaces/
+│   │   └── map-config.interface.ts
+│   └── types/
+│       └── biome.type.ts
+├── map/
+│   ├── dto/
+│   │   └── map-config.dto.ts
+│   ├── map.controller.ts
+│   ├── map.service.ts
+│   └── map.module.ts
+├── utils/
+│   └── map-generator.util.ts
+└── app.module.ts
+```
+
+## Choix techniques 
+* NestJS : Choisi pour sa structure modulaire et son support de TypeScript
+* TypeScript : Utilisé pour améliorer la maintenabilité et réduire les erreurs potentielles
+* `class-validator` : Utilisé pour une validation robuste des entrées 
